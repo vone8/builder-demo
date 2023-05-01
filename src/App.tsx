@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 
+import './components/blogTitle/blogTitle.builder';
+
 // Put your API key here
 builder.init("920a9a8d87c647f7a895f824b2812f5e");
 
@@ -32,6 +34,7 @@ export default function CatchAllRoute() {
       }
     }
     fetchContent();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.location.pathname]);
 
   // If no page is found, return 
